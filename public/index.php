@@ -1,11 +1,7 @@
 <?php
 
+require_once __DIR__.'/../db.php';
 
-$pdo = new PDO('mysql:host=localhost;port=3306;dbname=products_db', 'root', 'toor');
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// echo '<pre>';
-// var_dump($_GET);
-// echo '</pre>';
 $search = $_GET['search'] ?? null;
 
 if ($search) {
